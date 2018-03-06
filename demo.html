@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tabacco Demo</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="jquery.tabacco.min.js"></script>
+</head>
+
+<body>
+
+<!-- implements default classes -->
+<div class="my-container" id="my-container">
+    <ul class="tabacco-tabs">
+        <li><a href="">tab 1</a></li>
+        <li><a href="">tab 2</a></li>
+        <li><a href="">tab 3</a></li>
+    </ul>
+    <div class="tabacco-panel">
+        this is panel 1
+    </div>
+    <div class="tabacco-panel">
+        this is panel 2
+    </div>
+    <div class="tabacco-panel">
+        this is panel 3
+    </div>
+</div>
+
+<!-- implements custom classes -->
+<div class="comp-tabs" id="comp-tabs">
+    <ul class="tabacco-tabs">
+        <li><a href="" class="comp-tabs__list__tab">tab 1</a></li>
+        <li><a href="" class="comp-tabs__list__tab">tab 2</a></li>
+        <li><a href="" class="comp-tabs__list__tab">tab 3</a></li>
+    </ul>
+    <div class="comp-tabs__panel">
+        this is panel 1
+    </div>
+    <div class="comp-tabs__panel">
+        this is panel 2
+    </div>
+    <div class="comp-tabs__panel">
+        this is panel 3
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        // default classes
+        $("#my-container").tabacco(); 
+        // Passing custom selectors as options
+        $("#comp-tabs").tabacco({
+            $tabs: $(".comp-tabs__list__tab"),
+            $panels: $(".comp-tabs__panel")
+        });       
+    });
+</script>
+
+</body>
+</html>
