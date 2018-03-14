@@ -1,12 +1,21 @@
 <!doctype html>
 <html>
 <head>
-    <title>Tabacco Demo</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <title>jQuery Tabacco Demo</title>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
     <script src="jquery.tabacco.min.js"></script>
 </head>
 
 <body>
+<style>
+    #my-container a.active,
+    #comp-tabs a.active {
+        color: red;
+    }
+</style>
 
 <!-- implements default classes -->
 <div class="my-container" id="my-container">
@@ -47,7 +56,7 @@
 <script>
     $(document).ready(function() {
         // default classes
-        $("#my-container").tabacco(); 
+        $("#my-container").tabacco();
         // Passing custom selectors as options
         $("#comp-tabs").tabacco({
             $tabs: $(".comp-tabs__list__tab"),
